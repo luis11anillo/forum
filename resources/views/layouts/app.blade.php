@@ -24,7 +24,7 @@
             </main>
         </div>
 
-        @livewireScipts 
+        @livewireScripts
 
     </body>
 
