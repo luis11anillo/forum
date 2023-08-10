@@ -8,16 +8,16 @@
         <ul>
             @foreach($categories as $category)
             <li class="mb-2">
-                <a href="" class="flex p-2 rounded-md bg-slate-800 items-center gap-2 text-white/60 hover:text-white font-semibold text-xs capitalize">
+                <a href="#" wire:click.prevent="filterByCategory('{{ $category->id }}')" class="flex p-2 rounded-md bg-slate-800 items-center gap-2 text-white/60 hover:text-white font-semibold text-xs capitalize">
                     <span class="w-2 h-2 rounded-full" style="background-color: {{ $category->color }};"></span>
                     {{ $category->name }}
                 </a>
             </li>
             @endforeach
             <li>
-                <a href="" class="flex p-2 rounded-md bg-slate-800 items-center gap-2 text-white/60 hover:text-white font-semibold text-xs capitalize">
+                <a href="#" wire:click.prevent="filterByCategory('')" class="flex p-2 rounded-md bg-slate-800 items-center gap-2 text-white/60 hover:text-white font-semibold text-xs capitalize">
                     <span class="w-2 h-2 rounded-full" style="background-color: #00acaa;"></span>
-                    EEEEjemplo 
+                    Todos los resultados
                 </a>
             </li>
         </ul>
@@ -25,6 +25,16 @@
 
     <!-- Formulario  -->
     <div class="w-full">
+
+        {{-- Busqueda --}}
+        <form action="" class="mb-4">
+            <input 
+                type="text"
+                placeholder="Search"
+                class="bg-slate-700 border-0 rounded-full w-1/2 p-3 text-white/60 text-xs"
+                wire:model="search"
+            >
+        </form>
 
         @foreach($threads as $thread)
         <div class="rounded-md bg-gradient-to-r from-slate-700 to-slate-800 hover:to-slate-700 mb-4">
