@@ -5,7 +5,7 @@
 ![Screenshot from 2023-08-18 16-41-57](https://github.com/luis11anillo/forum/assets/76981798/d755c73d-10f9-41a3-a91a-e64c78cc1bc2)
 
 
-## FrameWorks
+## Frameworks:
 
  - [Laravel](https://laravel.com/docs/10.x)
  - [Livewire](https://laravel-livewire.com/)
