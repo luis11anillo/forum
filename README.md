@@ -6,6 +6,7 @@
 ## Frameworks:
 
  - [Laravel](https://laravel.com/docs/10.x)
+ - [Laravel Breeze]([https://laravel.com/docs/10.x](https://laravel.com/docs/10.x/starter-kits#laravel-breeze))
  - [Livewire](https://laravel-livewire.com/)
  - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 
