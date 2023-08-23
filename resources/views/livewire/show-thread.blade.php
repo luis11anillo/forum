@@ -1,4 +1,4 @@
-<div class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 flex gap-10 py-12">
+<div class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 py-12">
     <div class="rounded-md bg-gradient-to-r from-slate-700 to-slate-800 mb-4">
         <div class="p-4 flex gap-4">
             <div>
@@ -29,9 +29,21 @@
     </div>
 
     {{-- Respuestas --}}
+    {{-- imprimiendo un componenete --}}
+    @foreach ($replies as $reply)
+        @livewire('show-reply', ['reply' => $reply], key('reply-'.$reply->id))    
+    @endforeach
     
     {{-- Formulario --}}
 
+    <form wire:submit.prevent="postReply">
+        <input 
+            type="text"
+            placeholder="Reply"
+            class="bg-slate-700 border-0 rounded-full w-full p-3 text-white/60 text-xs"
+            wire:model.defer="content"
+        >
+    </form>
 
 </div>
 
