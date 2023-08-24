@@ -10,6 +10,7 @@ class Reply extends Model
     use HasFactory;
 
     protected $fillable = [
+        'reply_id',
         'thread_id',
         'content'
     ];
@@ -17,5 +18,15 @@ class Reply extends Model
     public function user() 
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function thread() 
+    {
+        return $this->belongsTo(Thread::class);
+    }
+
+    public function replies() 
+    {
+        return $this->hasMany(Reply::class);    
     }
 }
