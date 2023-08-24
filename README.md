@@ -3,7 +3,7 @@
 ![Screenshot from 2023-08-18 16-41-57](https://github.com/luis11anillo/forum/assets/76981798/d755c73d-10f9-41a3-a91a-e64c78cc1bc2)
 
 
-## Frameworks:
+## Frameworks & packages:
 
  - [Laravel](https://laravel.com/docs/10.x)
  - [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits#laravel-breeze)
