@@ -1,5 +1,5 @@
 <div>
-    <div class="rounded-md bg-gradient-to-r from-slate-700 to-slate-800 mb-4">
+    <div class="rounded-md bg-gradient-to-r from-slate-700 to-slate-800 hover:to-slate-700 mb-4">
         <div class="p-4 flex gap-4">
             <div>
                 <img src="{{ $reply->user->avatar() }}" alt="{{ $reply->user->name }}" class="rounded-md">
@@ -18,5 +18,11 @@
             </div>
         </div>
     </div>
+
+    @foreach ($reply->replies as $item)
+        <div class="ml-8">
+            @livewire('show-reply', ['reply' => $item], key('reply-'.$item->id))
+        </div>    
+    @endforeach
 </div>
 
