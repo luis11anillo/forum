@@ -9,7 +9,18 @@
                         {{ $reply->user->name }}
                 </p>
                 <p class="text-white/60 text-xs">
-                    {{ $reply->content }}
+                    @if($is_editing)
+                        <form wire:submit.prevent="updateReply" class="mt-4">
+                            <input 
+                                type="text"
+                                placeholder="Reply"
+                                class="bg-slate-700 border-1 border-blue-400 rounded-md w-full p-3 text-white/60 text-xs"
+                                wire:model.defer="content"
+                            >
+                        </form>
+                    @else
+                        {{ $reply->content }}
+                    @endif
                 </p>
 
                 @if($is_creating)
@@ -28,7 +39,7 @@
                         {{-- usamos toogle para cambiar el estado de una veriable booleana 'is_creating' --}}
                         <a href="#" wire:click.prevent="$toggle('is_creating')" class="hover:text-white">Responder</a>
                     @endif
-                    <a href="" class="hover:text-white">Editar</a>
+                    <a href="#" wire:click.prevent="$toggle('is_editing')" class="hover:text-white">Editar</a>
                 </p>
             </div>
         </div>

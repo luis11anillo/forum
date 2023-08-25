@@ -11,9 +11,25 @@ class ShowReply extends Component
     public Reply $reply;
     public $content = '';
     public $is_creating = false; 
+    public $is_editing = false;
 
-    /* Funcion de refrescar: */
+    /* Refrescar: */
     protected $listeners = ['refresh' => '$refresh'];
+
+
+    /* Editar */
+    public function updateReply() 
+    {        
+        // validate
+        $this->validate(['content' => 'required']);
+
+        // Update
+        $this->reply->update(['content' => $this->content ]);
+
+        // refresh
+        $this->is_editing = false;
+    }
+
 
     public function postChild() 
     {
