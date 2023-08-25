@@ -4,9 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Reply;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ShowReply extends Component
 {
+    use AuthorizesRequests;
 
     public Reply $reply;
     public $content = '';
@@ -23,6 +25,7 @@ class ShowReply extends Component
 
     public function updatedIsEditing() 
     {
+        $this->authorize('update', $this->reply);
         $this->is_creating = false;
         $this->content = $this->reply->content;
     }
@@ -33,7 +36,10 @@ class ShowReply extends Component
 
     /* Editar */
     public function updateReply() 
-    {        
+    {     
+        //'update' hace referencia a la funcion en la politica ReplyPolicy
+        $this->authorize('update', $this->reply);
+
         // validate
         $this->validate(['content' => 'required']);
 
