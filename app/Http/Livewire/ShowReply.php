@@ -13,6 +13,20 @@ class ShowReply extends Component
     public $is_creating = false; 
     public $is_editing = false;
 
+    // Se mantiene el updated, y se coloca en camel case el texto de la propiedad
+    // EX:
+    public function updatedIsCreating() 
+    {
+        $this->is_editing = false;
+        $this->content = '';
+    }
+
+    public function updatedIsEditing() 
+    {
+        $this->is_creating = false;
+        $this->content = $this->reply->content;
+    }
+
     /* Refrescar: */
     protected $listeners = ['refresh' => '$refresh'];
 
