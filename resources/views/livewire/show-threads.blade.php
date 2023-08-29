@@ -1,7 +1,7 @@
 <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex gap-10 py-12">
     <!-- Pregunta -->
     <div class="w-64">
-        <a href="" class="block w-full py-4 mb-10 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500  text-white/80 text-xs font-bold rounded-md text-center">
+        <a href="{{ route('threads.create') }}" class="block w-full py-4 mb-10 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500  text-white/80 text-xs font-bold rounded-md text-center">
             Pregunta
         </a>
         <p class="text-white mb-4 text-sm">Categorias: </p>
