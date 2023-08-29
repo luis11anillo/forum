@@ -7,9 +7,13 @@
                     </h2>
 
                     <form action="{{ route('threads.update', $thread) }}" method="POST">
+                        {{-- (csrf) Token de seguridad se debe incluir en todos los form: --}}
                         @csrf
+
+                        {{-- genera un campo oculto en el formulario que indica que el método HTTP utilizado para la solicitud es PUT. --}}
                         @method('PUT')
 
+                        {{-- Incluir una vista (folder.file) --}}
                         @include('thread.form')
 
                         <input 
