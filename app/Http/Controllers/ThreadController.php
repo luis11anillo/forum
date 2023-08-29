@@ -10,6 +10,8 @@ class ThreadController extends Controller
 {
     public function edit(Thread $thread) 
     {
+        $this->authorize('update', $thread);
+
         $categories = Category::get();
 
         //se envia a la vista (carpeta tread con el nombre edit)
@@ -18,6 +20,9 @@ class ThreadController extends Controller
 
     public function update(Request $request, Thread $thread) 
     {
+
+        $this->authorize('update', $thread);
+
         //validate: 
         $request->validate([
             'category_id' => 'required',
