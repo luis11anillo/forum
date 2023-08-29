@@ -18,7 +18,6 @@ Forum designed to facilitate conversations, discussions, and information sharing
 
 ![Screenshot from 2023-08-29 15-54-39](https://github.com/luis11anillo/forum/assets/76981798/ad2ce4b2-3d09-4246-9102-331c0bbc99ae)
 
-## Edit Reply
 
 
 
