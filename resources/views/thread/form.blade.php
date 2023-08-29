@@ -8,7 +8,7 @@
         @foreach ($categories as $category)
             <option value="{{ $category->id }}"
 
-                @if ($thread->category_id == $category->id)
+                @if (old('category_id' , $thread->category_id) == $category->id)
                 selected 
                 @endif 
 
@@ -21,7 +21,7 @@
         type="text" 
         name="title" 
         placeholder="Titulo"
-        value="{{ $thread->title }}"
+        value="{{ old('title', $thread->title) }}"
         class="bg-slate-700 border-1 border-slate-900 rounded-md w-full p-3 text-white/60 text-xs mb-4"
     >
 
@@ -30,6 +30,6 @@
         placeholder="Descripc&iacute;on del problema"
         rows="10"
         class="bg-slate-700 border-1 border-slate-900 rounded-md w-full p-3 text-white/60 text-xs mb-4"
-    >{{ $thread->content }}</textarea>
+    >{{ old('content', $thread->content) }}</textarea>
 
 </div>
