@@ -9,7 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
 {
-    use HasFactory;        
+    use HasFactory;   
+    
+    protected $fillable = [
+        'category_id',
+        'title', 
+        'content'
+    ];
 
     // una Pregunta pertenece a un Usuario
     public function user() 
