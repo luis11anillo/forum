@@ -2,7 +2,7 @@
 
 # Forum
 
-Forum designed to facilitate conversations, discussions, and information sharing among a community of users. It provides a space where users can create posts, ask questions, share experiences, and discuss a wide range of topics. These discussions are organized into categories that are related to specific themes or subjects.
+Forum designed to facilitate conversations, discussions, and information sharing among a community of users. It provides a space where users can create posts, ask and reply questions, share experiences and discuss a wide range of topics. These discussions are organized into categories that are related to specific themes or subjects.
 
 
 
